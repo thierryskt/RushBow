@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rush de Bow — L2 Reborn Legacy C1 · Ghaz</title>
+<meta name="description" content="Checklist de leveling de arqueiro (nível 1–30) para Lineage 2 Reborn Legacy, Crônica 1.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef0e8;--surface:#e2e6da;--ink:#14201f;--muted:#4d5e5b;--line:#b9c3b8;--accent:#17806f;--gold:#8f620c;--danger:#b2432d;
+--head:"Familjen Grotesk","Trebuchet MS",sans-serif;--body:"Source Serif 4",Georgia,serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1819;--surface:#152426;--ink:#e8e6d8;--muted:#9fb1ad;--line:#2a3f3f;--accent:#4fc5ae;--gold:#e5ad45;--danger:#e8765e;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1819;--surface:#152426;--ink:#e8e6d8;--muted:#9fb1ad;--line:#2a3f3f;--accent:#4fc5ae;--gold:#e5ad45;--danger:#e8765e;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.6 var(--body)}
+h1,h2,h3{font-family:var(--head);line-height:1.1;margin:0}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bg);border-bottom:1px solid var(--line);display:flex;gap:4px;align-items:center;padding:8px 16px;overflow-x:auto}
+nav b{font-family:var(--head);margin-right:10px;white-space:nowrap}
+nav a,nav button{font:500 14px var(--head);min-height:40px;display:inline-flex;align-items:center;flex:none;text-decoration:none;color:var(--muted);padding:6px 12px;border-radius:99px;white-space:nowrap}
+nav a:hover{color:var(--ink);background:var(--surface)}
+nav a.on{background:var(--accent);color:var(--bg)}
+#theme{position:sticky;right:0;margin-left:auto;background:var(--bg);color:var(--ink);border:1px solid var(--line);cursor:pointer;box-shadow:-12px 0 12px var(--bg)}
+#theme:hover{border-color:var(--accent);color:var(--accent)}
+.hero{max-width:1040px;margin:0 auto;padding:56px 20px 28px}
+.hero small{font:500 15px var(--head);color:var(--accent)}
+.hero h1{font-size:clamp(38px,7vw,78px);letter-spacing:-.03em;margin:12px 0 14px;max-width:13ch}
+.hero p{max-width:60ch;color:var(--muted);margin:0 0 22px}
+.scene{border-radius:12px;overflow:hidden;border:1px solid var(--line);margin-bottom:22px}
+.scene svg{display:block;width:100%;height:auto}
+.s1{fill:var(--surface)}.s2{fill:var(--gold);opacity:.85}.s3{fill:var(--line)}.s4{fill:var(--accent);opacity:.4}.s5{fill:var(--accent);opacity:.65}
+.sl{stroke:var(--ink);fill:none;stroke-width:4;stroke-linecap:round}.sh{fill:var(--ink)}
+.gp{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:var(--surface);display:grid;gap:10px}
+.gp .top{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;justify-content:space-between;font:500 15px var(--head)}
+.bar{height:12px;background:var(--bg);border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--accent);transition:width .4s}
+.gp label{font:500 14px var(--head);color:var(--muted)}
+.gp input[type=number]{width:70px;font:700 16px var(--head);padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+.btns{display:flex;flex-wrap:wrap;gap:8px}
+.btn{font:500 14px var(--head);padding:8px 14px;min-height:40px;border:1px solid var(--line);border-radius:99px;background:var(--bg);color:var(--ink);cursor:pointer}
+.btn:hover{border-color:var(--accent);color:var(--accent)}.btn:active{transform:scale(.97)}
+.btn.d:hover{border-color:var(--danger);color:var(--danger)}
+main{max-width:1040px;margin:0 auto;padding:0 20px 80px}
+section{padding-top:64px}
+h2{font-size:clamp(26px,4vw,38px);letter-spacing:-.02em;margin-bottom:10px}
+.lead{color:var(--muted);max-width:64ch;margin:0 0 22px}
+details{border:1px solid var(--line);border-radius:10px;padding:12px 16px;background:var(--surface)}
+summary{font:700 16px var(--head);cursor:pointer;min-height:32px}
+details ul{margin:12px 0 4px;padding-left:20px;font-size:16px}details li{margin-bottom:6px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px 36px}
+.cols h3{font-size:18px;margin-bottom:4px}.cols p{margin:0;font-size:16px;color:var(--muted)}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+table{width:100%;border-collapse:collapse;min-width:600px;font-size:16px}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line)}
+th{font:500 14px var(--head);color:var(--muted);background:var(--surface)}tr:last-child td{border-bottom:0}
+.box{background:var(--surface);border-radius:10px;padding:14px 18px;margin-top:18px;font-size:16px}
+.tl{position:relative;margin-top:20px;padding-left:44px}
+.tl::before{content:"";position:absolute;left:11px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--accent),var(--line))}
+.ph{position:relative;padding:0 0 52px}
+.ph::before{content:"";position:absolute;left:-40px;top:10px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+.ph.done::before{background:var(--accent)}.ph.cur::before{border-color:var(--gold);box-shadow:0 0 0 4px color-mix(in srgb,var(--gold) 30%,transparent)}
+.lv{font:700 15px var(--head);color:var(--accent)}.ph.cur .lv::after{content:" · você está aqui";color:var(--gold)}
+.ph h3{font-size:clamp(23px,3.2vw,30px);margin:4px 0}
+.where{color:var(--muted);margin:0 0 14px;font-size:16px}
+.bow{display:inline-flex;align-items:center;gap:8px;font:700 14px var(--head);background:var(--accent);color:var(--bg);padding:4px 12px;border-radius:4px;margin-bottom:14px}
+.bow svg{width:28px;height:22px;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+dl{display:grid;grid-template-columns:minmax(90px,130px) 1fr;margin:0 0 14px;border-top:1px solid var(--line)}
+dt,dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:16px}dt{font:500 14px var(--head);color:var(--muted);padding-right:12px}
+.pm{display:flex;align-items:center;gap:12px;margin:6px 0 8px}.pm .bar{flex:1;height:8px}.pm span{font:500 14px var(--head);color:var(--muted);white-space:nowrap}
+.steps{list-style:none;margin:0;padding:0}
+.steps li{border-bottom:1px solid var(--line)}
+.steps label{display:flex;gap:12px;align-items:flex-start;padding:11px 4px;cursor:pointer;font-size:16px}
+.steps input{appearance:none;flex:none;width:24px;height:24px;margin-top:2px;border:2px solid var(--muted);border-radius:6px;background:var(--bg);cursor:pointer;display:grid;place-content:center}
+.steps input:checked{background:var(--accent);border-color:var(--accent)}
+.steps input:checked::after{content:"✓";color:var(--bg);font:700 16px var(--head);line-height:1}
+.steps input:checked+span{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--line)}
+.steps .opt span::before{content:"opcional";font:500 12px var(--head);color:var(--gold);border:1px solid var(--gold);border-radius:4px;padding:0 6px;margin-right:8px}
+.steps b{font-family:var(--head)}
+.pbtn{margin-top:8px;display:flex;gap:8px}
+.tips{display:grid;gap:0}.tip{padding:18px 0;border-top:1px solid var(--line)}
+.tip h3{font-size:20px;margin-bottom:4px}.tip p{margin:0;color:var(--muted);font-size:16px}
+textarea{width:100%;min-height:140px;font:16px/1.5 var(--body);padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);resize:vertical}
+footer{max-width:1040px;margin:0 auto;padding:24px 20px 50px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+#top{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:9;width:46px;height:46px;border-radius:50%;border:0;background:var(--accent);color:var(--bg);font:700 20px var(--head);cursor:pointer;opacity:0;pointer-events:none;transition:opacity .25s}#top.show{opacity:1;pointer-events:auto}
+@media (max-width:640px){body{font-size:17px}dl{grid-template-columns:1fr}dt{border-bottom:0;padding-bottom:0}.hero{padding-top:36px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bar i{transition:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="b1" viewBox="0 0 40 30"><path d="M14 4 C28 10 28 20 14 26"/><path d="M14 4 V26" stroke-width="1.2"/><path d="M6 15 H37 M32 10 L37 15 L32 20"/></symbol>
+<symbol id="b2" viewBox="0 0 40 30"><path d="M13 2 C31 9 31 21 13 28"/><path d="M13 2 V28" stroke-width="1.2"/><path d="M5 15 H37 M32 10 L37 15 L32 20"/></symbol>
+<symbol id="b3" viewBox="0 0 40 30"><path d="M10 1 C14 3 33 8 33 15 C33 22 14 27 10 29"/><path d="M10 1 V29" stroke-width="1.2"/><path d="M4 15 H38 M33 10 L38 15 L33 20"/></symbol>
+</svg>
+<nav>
+<b>Rush de Bow</b>
+<a href="#revisao">Revisão</a><a href="#arcos">Arcos</a><a href="#rota">Rota 1–30</a><a href="#skills">Skills</a><a href="#dicas">Dicas</a><a href="#diario">Diário</a>
+<button id="theme" type="button" aria-pressed="false"><span id="tl">Modo escuro</span></button>
+</nav>
+
+<header class="hero">
+<small>Ghaz · Human Fighter → Rogue → Hawkeye · Crônica 1: Harbingers of War</small>
+<h1>Do primeiro Keltir ao nível 30.</h1>
+<p>Checklist de arqueiro para o L2 Reborn Legacy x1 (servidor abre em C1, 6 de novembro de 2026). Marque cada passo: o progresso fica salvo neste navegador.</p>
+<div class="scene">
+<svg viewBox="0 0 1000 240" role="img" aria-label="Ilustração: arqueiro diante de um castelo ao luar">
+<rect class="s1" width="1000" height="240"/><circle class="s2" cx="820" cy="64" r="30"/>
+<polygon class="s3" points="0,180 120,110 220,160 340,80 470,170 600,120 720,180 860,128 1000,170 1000,240 0,240"/>
+<path class="s4" d="M0 214 C150 180 300 190 450 210 C600 228 800 192 1000 210 V240 H0Z"/>
+<rect class="s5" y="226" width="1000" height="14"/>
+<circle class="sh" cx="300" cy="150" r="11"/>
+<path class="sl" d="M300 164 V206 M300 206 L287 232 M300 206 L314 232 M300 178 L338 170"/>
+<path class="sl" d="M334 128 C372 154 372 196 334 222"/>
+<path class="sl" d="M312 172 H440 M430 165 L441 172 L430 179" style="stroke-width:3"/>
+</svg></div>
+<div class="gp">
+<div class="top"><span id="gtxt">0 de 0 passos</span><span id="gpct">0%</span></div>
+<div class="bar"><i id="gbar"></i></div>
+<div class="top"><label>Meu nível atual <input type="number" id="lvl" min="1" max="30" inputmode="numeric"></label>
+<div class="btns"><button class="btn" id="exp" type="button">Copiar progresso</button><button class="btn" id="imp" type="button">Importar</button><button class="btn d" id="rst" type="button">Zerar tudo</button></div></div>
+</div>
+</header>
+
+<main>
+<section id="revisao">
+<h2>Revisão desta versão</h2>
+<p class="lead">Conferi o conteúdo contra o banco de dados da C1 (L2Hub) e o guia da Buffwire sobre o Legacy. Estes pontos do planejamento original estavam errados ou sem fonte e foram corrigidos.</p>
+<details open><summary>O que mudou</summary><ul>
+<li><b>Troca de classe:</b> a quest Path to a Rogue começa no nível 19, mas você vira Rogue no nível 20, com o Grand Master Ramos em Gludin.</li>
+<li><b>Soulshots:</b> arcos D-Grade gastam 6 SS por tiro (≈60 adenas), não ≈10. Short Bow e Bow nem aceitam SS. No Legacy (C1), shots não aumentam o dano de skills como o Power Shot.</li>
+<li><b>Arcos:</b> o topo NG é o Composition Bow, não o Forest Bow. Short Bow não é arma inicial: compre-o.</li>
+<li><b>Flechas:</b> arcos D usam Bone Arrow. Fine Steel Arrow é de arco C-Grade.</li>
+<li><b>Quests:</b> “Cure for Fever” não existe na C1. “Obtain a Wolf Pet” é <i>Get a Pet</i> (nv. 15, Pet Manager Martin, Gludin Village). Hunt of the Black Lion exige a Black Lion Mark da Vanquish Remnants.</li>
+<li><b>Mobs e locais:</b> removidos monstros que não existem nesses spots (Goblin Brigand, Ruin Wolf, Scavenger Bat, Werewolf Worker).</li>
+<li><b>Valores sem fonte removidos:</b> lucros em adena, preço do colar do lobo, preço da passagem e tempo por fase. Ficaram só preços-base e recompensas do banco de dados.</li>
+</ul></details>
+<div class="cols" style="margin-top:22px">
+<div><h3>Stamina</h3><p>Cada conta recebe 20.000 de stamina por dia (reset 06:30 UTC). Cerca de 4 h a 100% de EXP, SP, adena e drop; depois cai para 50%, 30% e 5%. Meta realista até o nível 20: 8–10 h, segundo a Buffwire.</p></div>
+<div><h3>Sem dualbox, sem power-leveling</h3><p>Jogador só pode ter um personagem online. Em party, diferença de 5 níveis já reduz EXP e 20 níveis zera.</p></div>
+<div><h3>Mobs não são puxados longe</h3><p>Monstros param de perseguir a 1.300–2.500 unidades do spawn. Kiting longo funciona menos que em outros servidores.</p></div>
+<div><h3>Morrer não derruba itens</h3><p>Em PvE você só perde EXP. Não há CP e os teleportes vão só de cidade a cidade.</p></div>
+</div>
+</section>
+
+<section id="arcos">
+<h2>Arcos, flechas e Soulshots</h2>
+<p class="lead">Valores do banco de dados da C1. “Preço-base” é a referência do item; o preço real depende do NPC ou do mercado de jogadores. Fighters usam NG até o nível 19 e precisam da Expertise D (nível 20, na troca de classe) para o D-Grade.</p>
+<div class="tw"><table>
+<thead><tr><th>Arco</th><th>Grade</th><th>P.Atk</th><th>Atk Spd</th><th>SS por tiro</th><th>Preço-base</th></tr></thead>
+<tbody>
+<tr><td>Short Bow</td><td>NG</td><td>16</td><td>293</td><td>não usa</td><td>768</td></tr>
+<tr><td>Bow</td><td>NG</td><td>23</td><td>293</td><td>não usa</td><td>12.500</td></tr>
+<tr><td>Hunting Bow</td><td>NG</td><td>34</td><td>293</td><td>6</td><td>54.100</td></tr>
+<tr><td>Forest Bow</td><td>NG</td><td>49</td><td>293</td><td>7</td><td>136.000</td></tr>
+<tr><td>Composition Bow</td><td>NG</td><td>64</td><td>293</td><td>7</td><td>244.000</td></tr>
+<tr><td>Strengthened Bow</td><td>D</td><td>82</td><td>293</td><td>6</td><td>409.000</td></tr>
+<tr><td>Elven Bow</td><td>D</td><td>105</td><td>293</td><td>6</td><td>644.000</td></tr>
+<tr><td>Long Bow</td><td>D</td><td>115</td><td>227</td><td>6</td><td>644.000</td></tr>
+</tbody></table></div>
+<p class="note" style="font-size:14px;color:var(--muted)">Long Bow tem mais P.Atk, mas atira mais devagar (227 contra 293).</p>
+<div class="cols" style="margin-top:22px">
+<div><h3>Flechas (preço-base)</h3><p>Wooden Arrow (NG): 2 · Bone Arrow (D): 3 · Fine Steel Arrow (C): 5. A flecha precisa ser do mesmo grade do arco.</p></div>
+<div><h3>Custo por tiro</h3><p>Com SS D: 6 × 10 + 3 ≈ 63 adenas. Sem SS: 3 adenas (só a Bone Arrow). Por isso a Buffwire avisa que shots raramente se pagam sozinho com arco.</p></div>
+</div>
+</section>
+
+<section id="rota">
+<h2>Rota de leveling</h2>
+<p class="lead">Seis fases, do nível 1 ao 30. Os mobs listados existem no spot e seus níveis estão entre parênteses. Itens “opcional” são quests extras de Talking Island e Gludio.</p>
+<div class="tl" id="tl-root"></div>
+</section>
+
+<section id="skills">
+<h2>Skills de arco por nível</h2>
+<p class="lead">Custos de SP do banco de dados da C1 para Human Fighter e Rogue. Marque conforme aprender.</p>
+<div class="tl" id="sk-root"></div>
+</section>
+
+<section id="dicas">
+<h2>Como não falir</h2>
+<div class="tips">
+<div class="tip"><h3>Só use Soulshot quando ele se pagar</h3><p>Short Bow e Bow não aceitam SS, e os demais gastam 6 por tiro. Tiros normais com flecha custam 2–3 adenas. Reserve SS D para quando as quests derem shots de graça.</p></div>
+<div class="tip"><h3>Encadeie as quests de Gludin e Dion</h3><p>Vanquish Remnants paga adena por badge e entrega a Black Lion Mark. Com a Mark, Hunt of the Black Lion paga adena por insígnia e, a cada 10 Lion’s Claws, uma recompensa aleatória (Soulshot D ×100 a ×400, poções, Scroll of Escape).</p></div>
+<div class="tip"><h3>Venda materiais para jogadores</h3><p>Sem dualbox, a oferta de materiais é pequena. A Buffwire espera materiais escassos e caros por muito tempo, então compare com o mercado antes de vender a NPC.</p></div>
+<div class="tip"><h3>Planeje a stamina</h3><p>Use as ~4 horas de EXP cheia nos spots melhores e deixe as tarefas de deslocamento e quests para o fim do dia.</p></div>
+</div>
+</section>
+
+<section id="diario">
+<h2>Diário de bordo</h2>
+<p class="lead">Anote preços vistos, parties e ideias. Fica salvo neste navegador.</p>
+<textarea id="notes" placeholder="Ex.: nv. 12 — Hunting Bow comprado por…"></textarea>
+</section>
+</main>
+
+<footer>Fontes: <a href="https://l2hub.info/c1/">L2Hub C1 Database</a> (itens, quests, skills, locais) e <a href="https://buffwire.com/guides/l2-reborn-legacy-x1-guide/">guia Buffwire do Reborn Legacy</a>. Conferido em 5 de novembro de 2026. Recompensas e preços podem mudar no servidor; confirme no jogo.</footer>
+<button id="top" type="button" aria-label="Voltar ao topo">↑</button>
+
+<script>
+(function(){
+var KEY='bow-ghaz-c1-v1',S={c:{},lvl:'',n:''};
+function load(){try{var r=localStorage.getItem(KEY);if(r)S=Object.assign(S,JSON.parse(r))}catch(e){}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+function fmt(t){return t.replace(/\*\*(.+?)\*\*/g,'<b>$1</b>')}
+var P=[
+{r:[1,6],t:'Talking Island',w:'Cedric’s Training Hall e arredores da vila',b:'b1',bw:'Short Bow (NG, P.Atk 16)',
+i:[['Mobs','Bearded Keltir e Elpy (tutorial) · Elder Keltir (3) · Wolf (4) · Elder Wolf e Giant Toad (5) · Orc (6)'],['Flechas','Wooden Arrow, sem Soulshot']],
+s:['**Fighter’s Tutorial** (Master Carlrin): traga 4 Keltir Fangs e leve a Recommendation ao Grand Master Roien (+50 SP)','Compre **Short Bow** e Wooden Arrows','**Nível 5:** aprender Power Shot 1–3 (60 SP cada)','Quests nv. 2 em Talking Island Village: **Deliver Goods** (Guard Arnold) e **Sacrifice to the Sea** (Rockswell)','?**Letters of Love** (nv. 2, Darin) e **Bring Wolf Pelts** (nv. 3, Trader Lector)']},
+{r:[6,10],t:'Obelisk of Victory',w:'Talking Island',b:'b2',bw:'Bow (NG, P.Atk 23) → Hunting Bow (NG, 34)',
+i:[['Mobs','Orc Grunt (7) · Orc Archer e Goblin Scout (8) · Werewolf (9) · Orc Fighter e Werewolf Hunter (10)'],['Flechas','Wooden Arrow. Bow não aceita SS']],
+s:['Troque para o **Bow** quando tiver adena (base 12.500)','**The Guard is Busy** (nv. 6, Captain Gilbert)','**Collect Arrowheads** (nv. 10, Master Minia)','**Nível 10:** aprender Power Shot 4–6 (350 SP cada)','?**Recover Smuggled Goods** (nv. 5, Warehouse Keeper Wilford)']},
+{r:[10,15],t:'Elven Ruins',w:'Talking Island',b:'b2',bw:'Hunting Bow (34) → Forest Bow (49) → Composition Bow (64)',
+i:[['Mobs','Skeleton (12) · Tunath Orc Warrior (12) · Skeleton Archer (13) · Skeleton Marksman e Misery Skeleton (14) · Skeleton Lord e Dungeon Spider (15)'],['Flechas','Wooden Arrow. Hunting Bow gasta 6 SS por tiro, então só use se compensar']],
+s:['Compre o **Hunting Bow** (base 54.100)','?**Shards of Golem** (nv. 10, Magister Harrys)','**Nível 15:** aprender Power Shot 7–9 (1.300 SP cada)','Viaje para **Gludin** (confirme no gatekeeper ou no porto o custo atual)','?**Save My Sister** (nv. 15, Elias, Talking Island Village)']},
+{r:[15,20],t:'Ruins of Agony',w:'Gludio · Path to a Rogue em Gludin Village',b:'b2',bw:'Forest Bow ou Composition Bow (NG)',
+i:[['Mobs','Ruin Zombie (15) · Ruin Zombie Leader (16) · Tracker Skeleton (17) · Tracker Skeleton Leader (18) · Skeleton Scout (19) · Skeleton Bowman (20)'],['Flechas','Wooden Arrow']],
+s:['**Nível 19:** falar com Captain Bezique em Gludin e iniciar **Path to a Rogue**','Falar com **Neti** (Gludin) e coletar 10 Spartoi’s Bones nas Ruins of Agony','Voltar a Neti, pegar a Horseshoe of Light e levar a Bezique','Matar os **Cat’s Eye Bandits** (nv. 15) perto do Abandoned Camp e recuperar os itens roubados','Entregar a Bezique: 3.200 EXP, 1.130 SP e a Bezique’s Recommendation','**Nível 20:** falar com o Grand Master Ramos (Gludin) e virar **Rogue**','?**Get a Pet** (nv. 15, Pet Manager Martin): 50 Bloody Fangs, visitas em Gludio, Dion e Giran e um quiz; recompensa: Wolf Collar']},
+{r:[20,25],t:'Abandoned Camp',w:'Gludin Territory',b:'b3',bw:'Strengthened Bow (D, P.Atk 82)',
+i:[['Mobs','Ol Mahum Patrol e Recruit (21) · Guard (22) · Straggler e Supplier (23) · Officer e Shooter (24) · Captain (25)'],['Flechas','Bone Arrow (3). Arco D gasta 6 SS por tiro']],
+s:['Conseguir um **arco D-Grade** (drop, craft ou mercado) e Bone Arrows','**Vanquish Remnants** (nv. 21, Leopold, Gludin Village): Red 60, Blue 65 e Black 70 adenas por badge','Entregar 100 badges de uma vez a Leopold para receber a **Black Lion Mark** e guardá-la','**Nível 24:** aprender as skills da faixa 24 (ver Skills)']},
+{r:[25,30],t:'Execution Ground ou Partisan Hideaway',w:'Dion Territory',b:'b3',bw:'Elven Bow (D, 105) ou Long Bow (D, 115)',
+i:[['Execution Ground','Specter (26) · Sorrow Maiden (27) · Neer Crawler (28) · Neer Ghoul Berserker (29) · Strain (31) e Ghoul (32) acima de 30'],['Partisan','Ol Mahum Guerilla (26) · Raider (27) · Marksman (28) · Sergeant (29) · Captain (30)'],['Flechas','Bone Arrow. Soulshot D virá das quests']],
+s:['**Hunt of the Black Lion** (nv. 25, Mercenary Sophya, Dion): exige a Black Lion Mark','Caçar para a quest: Undead Ash (Execution Ground), Bloody Axe Insignia (Partisan) ou outros locais da quest','Trocar Lion’s Claws: a cada 10, recompensa aleatória que inclui Soulshot D ×100 a ×400','**Nível 28:** aprender as skills da faixa 28 (ver Skills)','**Nível 30 alcançado**']}
+];
+var K=[
+{r:[5,5],t:'Human Fighter',s:['Power Shot 1–3 (nv. 5, 60 SP cada)','Power Shot 4–6 (nv. 10, 350 SP cada)','Power Shot 7–9 (nv. 15, 1.300 SP cada)']},
+{r:[20,20],t:'Rogue — nível 20',s:['Expertise D (automática)','Bow Mastery 1–3 (1.200 SP cada)','Power Shot 10–12 (1.200 SP cada)','Long Shot (3.700 SP)','Dash (3.700 SP)']},
+{r:[24,24],t:'Rogue — nível 24',s:['Bow Mastery 4–6 (2.300 SP cada)','Power Shot 13–15 (2.300 SP cada)','Accuracy (7.000 SP)','Critical Power (7.000 SP)']},
+{r:[28,28],t:'Rogue — nível 28',s:['Bow Mastery 7–9 (4.000 SP cada)','Power Shot 16–18 (4.000 SP cada)','Critical Chance (12.000 SP)','Quick Step (12.000 SP)']}
+];
+var ids=[];
+function item(id,txt,opt){ids.push(id);return '<li class="'+(opt?'opt':'')+'"><label><input type="checkbox" data-id="'+id+'"'+(S.c[id]?' checked':'')+'><span>'+fmt(txt)+'</span></label></li>'}
+function build(){
+var h='',k='';
+P.forEach(function(p,n){
+h+='<article class="ph" data-g="p'+n+'" data-lo="'+p.r[0]+'" data-hi="'+p.r[1]+'"><div class="lv">Nível '+p.r[0]+' a '+p.r[1]+'</div><h3>'+p.t+'</h3><p class="where">'+p.w+'</p>';
+h+='<span class="bow"><svg aria-hidden="true"><use href="#'+p.b+'"/></svg>'+p.bw+'</span><dl>';
+p.i.forEach(function(x){h+='<dt>'+x[0]+'</dt><dd>'+x[1]+'</dd>'});
+h+='</dl><div class="pm"><div class="bar"><i></i></div><span></span></div><ul class="steps">';
+p.s.forEach(function(s,j){var o=s.charAt(0)==='?';h+=item('p'+n+'s'+j,o?s.slice(1):s,o)});
+h+='</ul><div class="pbtn"><button class="btn" data-all="p'+n+'" type="button">Marcar fase</button><button class="btn" data-none="p'+n+'" type="button">Limpar fase</button></div></article>';
+});
+K.forEach(function(p,n){
+k+='<article class="ph" data-g="k'+n+'" data-lo="'+p.r[0]+'" data-hi="'+p.r[1]+'"><div class="lv">'+p.t+'</div><div class="pm"><div class="bar"><i></i></div><span></span></div><ul class="steps">';
+p.s.forEach(function(s,j){k+=item('k'+n+'s'+j,s,false)});
+k+='</ul></article>';
+});
+document.getElementById('tl-root').innerHTML=h;document.getElementById('sk-root').innerHTML=k;
+}
+function refresh(){
+var done=0;ids.forEach(function(i){if(S.c[i])done++});
+var pc=ids.length?Math.round(done*100/ids.length):0;
+document.getElementById('gtxt').textContent=done+' de '+ids.length+' passos';
+document.getElementById('gpct').textContent=pc+'%';
+document.getElementById('gbar').style.width=pc+'%';
+var lv=parseInt(S.lvl,10);
+document.querySelectorAll('.ph').forEach(function(a){
+var cb=a.querySelectorAll('input'),d=0;cb.forEach(function(c){if(c.checked)d++});
+a.querySelector('.bar i').style.width=(cb.length?d*100/cb.length:0)+'%';
+a.querySelector('.pm span').textContent=d+'/'+cb.length;
+a.classList.toggle('done',d===cb.length&&cb.length>0);
+var lo=+a.dataset.lo,hi=+a.dataset.hi;
+a.classList.toggle('cur',lv>=lo&&(lv<hi||(lv===hi&&hi===30)||lo===hi&&lv===lo));
+});
+}
+load();build();
+document.addEventListener('change',function(e){var c=e.target;if(c.dataset&&c.dataset.id){S.c[c.dataset.id]=c.checked;if(!c.checked)delete S.c[c.dataset.id];save();refresh()}});
+document.addEventListener('click',function(e){
+var b=e.target.closest('button');if(!b)return;
+var g=b.dataset.all||b.dataset.none;
+if(g){document.querySelectorAll('[data-g="'+g+'"] input').forEach(function(c){c.checked=!!b.dataset.all;if(c.checked)S.c[c.dataset.id]=true;else delete S.c[c.dataset.id]});save();refresh()}
+});
+var lvl=document.getElementById('lvl');lvl.value=S.lvl;
+lvl.addEventListener('input',function(){S.lvl=lvl.value;save();refresh()});
+var notes=document.getElementById('notes');notes.value=S.n||'';
+notes.addEventListener('input',function(){S.n=notes.value;save()});
+document.getElementById('rst').addEventListener('click',function(){
+if(confirm('Zerar todos os passos, o nível e o diário?')){S={c:{},lvl:'',n:''};save();document.querySelectorAll('.steps input').forEach(function(c){c.checked=false});lvl.value='';notes.value='';refresh()}
+});
+document.getElementById('exp').addEventListener('click',function(){
+var t=JSON.stringify(S),b=this;
+function ok(){b.textContent='Copiado!';setTimeout(function(){b.textContent='Copiar progresso'},1500)}
+if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(ok,function(){prompt('Copie o texto abaixo:',t)})}else{prompt('Copie o texto abaixo:',t)}
+});
+document.getElementById('imp').addEventListener('click',function(){
+var t=prompt('Cole o progresso copiado:');if(!t)return;
+try{var o=JSON.parse(t);if(!o||typeof o.c!=='object')throw 0;S=Object.assign({c:{},lvl:'',n:''},o);save();document.querySelectorAll('.steps input').forEach(function(c){c.checked=!!S.c[c.dataset.id]});lvl.value=S.lvl;notes.value=S.n||'';refresh()}catch(e){alert('Texto de progresso inválido.')}
+});
+var r=document.documentElement,tb=document.getElementById('theme'),tl=document.getElementById('tl'),top=document.getElementById('top');
+function dark(){return r.getAttribute('data-theme')?r.getAttribute('data-theme')==='dark':matchMedia('(prefers-color-scheme:dark)').matches}
+function sync(){var d=dark();tl.textContent=d?'Modo claro':'Modo escuro';tb.setAttribute('aria-pressed',String(d))}
+try{var sv=localStorage.getItem('bow-theme');if(sv)r.setAttribute('data-theme',sv)}catch(e){}
+sync();
+tb.addEventListener('click',function(){var n=dark()?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('bow-theme',n)}catch(e){}sync()});
+addEventListener('scroll',function(){top.classList.toggle('show',scrollY>700)},{passive:true});
+top.addEventListener('click',function(){scrollTo({top:0,behavior:'smooth'})});
+var links=[].slice.call(document.querySelectorAll('nav a'));
+try{var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){var on=a.getAttribute('href')==='#'+e.target.id;a.classList.toggle('on',on);if(on)a.parentNode.scrollTo({left:a.offsetLeft-80,behavior:'smooth'})})}})},{rootMargin:'-40% 0px -55% 0px'});document.querySelectorAll('main section').forEach(function(s){so.observe(s)})}catch(e){}
+refresh();
+})();
+</script>
+</body>
+</html>
